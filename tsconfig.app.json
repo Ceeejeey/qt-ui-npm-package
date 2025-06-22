@@ -1,0 +1,19 @@
+{
+"compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "strict": true,
+    "declaration": true,
+    "outDir": "./dist/app",
+    "skipLibCheck": true,
+    "types": ["@testing-library/jest-dom"],
+    "composite": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+   "include": ["src/**/*", "tests/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

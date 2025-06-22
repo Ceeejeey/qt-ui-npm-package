@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist", // Ensure output is directly to dist/
+    "rootDir": "./src", // Match the source root
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declarationMap": true
+  },
+  "include": ["src/**/*"], // Simplify to only src files
+  "exclude": ["node_modules", "dist", "demo", "tests/**/*"] // Exclude tests unless needed
+}

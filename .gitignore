@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Vite and testing
+vite.config.ts.map
+vitest.config.ts.map
+coverage/
+
+# npm and Yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local configuration
+.eslintcache
+.prettierrc
+.eslintrc
+.eslintignore
+
+
+
+
+# MacOS system files
+*.DS_Store
+
+# Ignore tarballs from npm pack
+*.tgz
