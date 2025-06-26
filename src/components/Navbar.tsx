@@ -61,7 +61,7 @@ import React, { useState, useEffect, type ReactNode } from 'react';
     profileAriaLabel = 'User Profile',
     profileClassName = 'p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md',
     navClassName = 'fixed w-full z-50 transition-all duration-500 ease-in-out',
-    containerClassName = 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
+    containerClassName = 'w-full px-4 sm:px-6 lg:px-8', // Changed max-w-7xl to w-full
     mobileMenuClassName = 'lg:hidden transition-all duration-300 ease-in-out',
     mobileToggleClassName = 'p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md',
     linkClassName = 'text-gray-900 dark:text-white font-medium',
@@ -86,7 +86,6 @@ import React, { useState, useEffect, type ReactNode } from 'react';
       return () => window.removeEventListener('scroll', handleScroll);
     }, [scrollThreshold]);
 
-    // Compute breakpoint classes statically for Tailwind
     const desktopClass = mobileBreakpoint === 'lg' ? 'hidden lg:flex' : 
                         mobileBreakpoint === 'md' ? 'hidden md:flex' : 
                         mobileBreakpoint === 'sm' ? 'hidden sm:flex' : 'hidden lg:flex';
@@ -101,14 +100,12 @@ import React, { useState, useEffect, type ReactNode } from 'react';
       >
         <div className={containerClassName}>
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
             <div className="flex items-center">
               <a href={logoHref} className={logoClassName} aria-label={logoAriaLabel}>
                 {logo || logoText}
               </a>
             </div>
 
-            {/* Desktop Links */}
             <div className={`${desktopClass} items-center space-x-8`} data-testid="desktop-menu">
               {links.map((link, index) => (
                 <a
@@ -125,7 +122,6 @@ import React, { useState, useEffect, type ReactNode } from 'react';
               </button>
             </div>
 
-            {/* Mobile Toggle */}
             <div className={mobileClass}>
               <button
                 className={mobileToggleClassName}
@@ -161,7 +157,6 @@ import React, { useState, useEffect, type ReactNode } from 'react';
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <div
           className={`${mobileMenuClassName} ${
             isMobileMenuOpen ? mobileMenuOpenClassName : 'max-h-0 opacity-0'
