@@ -45,7 +45,7 @@ function App() {
         profileIcon={profileIcon}
         profileAriaLabel="User Profile"
         profileClassName="hover:bg-gray-700 rounded-full p-1 transition"
-        navClassName="bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg"
+        navClassName="bg-blue-600 shadow-lg"
         containerClassName="max-w-7xl mx-auto"
         mobileMenuClassName="bg-gray-800 text-white"
         mobileToggleClassName="text-white hover:text-gray-300"

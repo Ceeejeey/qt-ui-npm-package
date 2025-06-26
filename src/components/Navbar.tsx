@@ -60,13 +60,13 @@ import React, { useState, useEffect, type ReactNode } from 'react';
     ),
     profileAriaLabel = 'User Profile',
     profileClassName = 'p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md',
-    navClassName = 'fixed w-full z-50 transition-all duration-500 ease-in-out',
-    containerClassName = 'w-full px-4 sm:px-6 lg:px-8', // Changed max-w-7xl to w-full
+    navClassName = 'fixed w-full z-50 transition-all duration-500 ease-in-out bg-blue-600', // Default with static color
+    containerClassName = 'w-full px-4 sm:px-6 lg:px-8',
     mobileMenuClassName = 'lg:hidden transition-all duration-300 ease-in-out',
     mobileToggleClassName = 'p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-md',
     linkClassName = 'text-gray-900 dark:text-white font-medium',
     linkHoverClassName = 'hover:text-blue-500 hover:scale-110 transition-all duration-300',
-    scrolledClassName = 'bg-gray-900/80 backdrop-blur-sm',
+    scrolledClassName = 'bg-blue-700', // Consistent scrolled color
     mobileMenuOpenClassName = 'max-h-64 opacity-100 bg-gray-900/90 shadow-lg',
     scrollThreshold = 50,
     mobileBreakpoint = 'lg',
@@ -95,7 +95,7 @@ import React, { useState, useEffect, type ReactNode } from 'react';
 
     return (
       <nav
-        className={`${navClassName} ${isScrolled ? scrolledClassName : 'bg-transparent'}`}
+        className={`${navClassName} ${isScrolled ? scrolledClassName : ''}`}
         onClick={onClick}
       >
         <div className={containerClassName}>
